@@ -1,0 +1,456 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+/*Portada principal*/
+*{
+  font-family: 'Source Sans Pro', sans-serif;
+}
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  color: #fff;
+  background-color:#fff;
+  box-shadow: 0 4px 25px -22px black;
+  z-index: 4;
+}
+.header-content{
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.Logo{
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 100px;
+}
+.Logo h1{
+  color: #000;
+}
+.Logo h1 b{
+  color: #46a2fd;
+}
+.Logo a{
+  text-decoration: none;
+}
+.menu{
+  height: 80px;
+  position: relative;
+  right: 100px;
+}
+.menu nav{
+  height: 100%;
+}
+.menu_items{
+  height: 100%;
+  display: flex;
+  list-style: none;
+}
+.menu_items li{
+  height: 100%;
+  margin: 0px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.menu-selected:before{
+  content: '';
+  width: 100%;
+  height: 4px;
+  background: #46a2fd;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+.menu_items li a{
+  color: #777777;
+}
+
+.menu_items li a:hover{
+  color: #777777;
+  transition: 300ms;
+}
+.menu .text-menu-selected{
+  color: #46a2fd;
+}
+.btn-menu{
+  margin-right: 30px;
+  margin-top: 30px;
+  font-size: 25px;
+  color: #46a2fd;
+  cursor: pointer;
+  display: none;
+  z-index: 100;
+}
+ul.show{
+  top: 62px;
+}
+
+
+/*Botones principales*/
+.botones{
+    text-align: center;
+    padding-top: 25px;
+}
+#segunda-fila{
+    padding-top: 5px;
+}
+.corner-button img{
+    width: 100px;
+    height: 100px;
+}
+.corner-button {
+    letter-spacing: .02rem;
+    cursor: pointer;
+    background: transparent;
+    border: 0.5rem solid currentColor;
+    padding: 1.5rem 2rem;
+    font-size: 2.2rem;
+    color: #111;
+    position: relative;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+  }
+  .corner-button:hover {
+    color: #46a2fd;
+  }
+  .corner-button:hover::before {
+    width: 0;
+  }
+  .corner-button:hover::after {
+    height: 0;
+  }
+  .corner-button:active {
+    border-width: 0.25rem;
+  }
+  .corner-button span {
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+  }
+  .corner-button::before, .corner-button::after {
+    content: '';
+    position: absolute;
+    background: #ffffff;
+    z-index: 1;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  .corner-button::before {
+    width: calc(100% - 3rem);
+    height: calc(101% + 1rem);
+    top: -0.5rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .corner-button::after {
+    height: calc(100% - 3rem);
+    width: calc(101% + 1rem);
+    left: -0.5rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+
+/*titulo por debajo de los botones*/
+.titulo{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+.titulo h1{
+  margin: auto;
+}
+.cazul{
+  color: #46a2fd;
+}
+
+
+/*Seccion tiendas*/
+.tienda{
+    text-align: center;
+    margin: auto;
+    width: 70%;
+}
+
+dl {
+    height: 20vh;
+    max-width: 70vh;
+    width: 100%;
+    align-self: center;
+    box-sizing: border-box;
+    margin: 80px auto;
+    position: relative;
+    background: #fff;
+    box-shadow: -5px 5px 5px 0px rgba(153, 153, 153, 0.05);
+    -webkit-transition: box-shadow 0.3s ease-out;
+    transition: box-shadow 0.3s ease-out;
+  }
+  dl:nth-child(even) {
+    margin-left: 20px;
+    transition: all 1s;
+  }
+  dl:nth-child(odd) {
+    margin-right: 20px;
+    transition: all 1s;
+  }
+  dl:nth-child(odd):hover {
+    margin-right: 50px;
+  }
+  dl:nth-child(even):hover {
+    margin-left: 50px;
+  }
+  dl:nth-child(odd):before {
+    margin-right: 20px;
+  }
+  dl:nth-child(even):before {
+    margin-left: 20px;
+  }
+  
+  dl img{
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      margin-left: -150px;
+      top: 10%;
+  }
+  dt {
+    color: #46a2fd;
+    font-size: 3.5vh;
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) rotatez(-90deg);
+            transform: translate(-50%, -50%) rotatez(-90deg);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  dd {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    height: 100%;
+    max-width: 45%;
+    margin-left: 55%;
+    padding: 5px;
+    color: #999;
+    font-size: 2.3vh;
+  }
+
+    /*boton share de las tiendas*/
+    .shareButton, .shareButton.open {
+      cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    padding: 8px;
+    overflow: hidden;
+    outline: none;
+    width: 24px;
+    height: 24px;
+    box-sizing: content-box;
+    -webkit-transition: all 200ms;
+    transition: all 200ms;
+    position: relative;
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+  .shareButton:hover, .shareButton.open:hover {
+    -webkit-transform: scale(1.1) translateY(-3px);
+            transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  }
+  .shareButton svg, .shareButton.open svg , .float{
+    display: block;
+    fill: #46a2fd;
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+    -webkit-transition: all 150ms;
+    transition: all 150ms;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  
+  .fb, .shareButton.open.ig {
+    -webkit-transition-delay: 100ms;
+            transition-delay: 100ms;
+  }
+  
+  .wa, .shareButton.open.wa {
+    -webkit-transition-delay: 50ms;
+            transition-delay: 50ms;
+  }
+  
+  .ig, .shareButton.open.fb {
+    -webkit-transition-delay: 0ms;
+            transition-delay: 0ms;
+  }
+  
+  .fb, .wa, .ig {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  .fb svg, .wa svg, .ig svg {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  } 
+  .btn-share a{
+    text-decoration: none;
+  }
+
+  @media screen and (max-width: 952px){
+    .Logo{
+      left: 30px;
+    }
+    .header{
+      height: 70px;
+    }
+  }
+
+  @media screen and (max-width: 868px){
+    .btn-menu{
+      display: inline-flex;
+      top: 0px;
+    }
+    .menu_items{
+      position: fixed;
+      width: 100vw;
+      height: calc(100% - 60px);
+      background-color: #46a2fd;
+      top: -200vw;
+      text-align: center;
+      transition: all 1s;
+      flex-direction: column;
+      left: 0;
+    }
+    .menu_items li{
+      height: 80%;
+      margin: 0px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      left: -30px;
+    }
+    .menu_items li a{
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+    .menu-selected:before{
+      height: 0px;
+    }
+    .menu_items li a{
+      color: #fff;
+    }
+    
+    .menu_items li a:hover{
+      color: #777777;
+      transition: 300ms;
+    }
+    .menu .text-menu-selected{
+      color: #fff;
+      box-shadow: 0px 5px rgb(255, 255, 255);
+    }
+    /*Tiendas recomendadas*/
+    .tienda{
+      text-align: center;
+      margin: auto;
+      width: 100%;
+  }
+  
+  dl {
+      height: 70vh;
+      width: 100%; 
+      background: #fff;
+      box-shadow: 5px 5px 5px 0.8px rgba(153, 153, 153, 0.05);
+      text-align: center;
+    }
+    dl:nth-child(even) {
+      margin-left: 0;
+      transition: all 1s;
+    }
+    dl:nth-child(odd) {
+      margin-right: 0;
+      transition: all 1s;
+    }
+    dl:nth-child(odd):hover {
+      margin-right: 0;
+    }
+    dl:nth-child(even):hover {
+      margin-left: 0;
+    }
+    dl:nth-child(odd):before {
+      margin-right: 0;
+    }
+    dl:nth-child(even):before {
+      margin-left: 0;
+    }
+  dl img{
+      width: 150px;
+      height: 150px;
+      position: relative;
+      margin-left: 0;
+      top: 80px;
+  }
+  dt {
+    color: #46a2fd;
+    font-size: 3.5vh;
+    position: absolute;
+    left: 35%;
+    top: 0;
+    margin-bottom: 5px;
+    -webkit-transform: translate(0) rotatez(0);
+            transform: translate(0) rotatez(0);
+  }
+  
+  dd {
+    display: flex;
+    height: 50%;
+    max-width: 95%;
+    margin-left: 0;
+    padding: 0;
+    color: #999;
+    font-size: 3vh;
+    position: relative;
+    top: 20px;
+    
+  }
+  /*btn share*/
+  
+  }
+
+  @media screen and (max-width: 868px) and (orientation: landscape){
+    .menu_items li{
+      margin: 5px 0 0 0;
+    }
+    .menu_items{
+      overflow: scroll;
+      height: calc(100% - 70px);
+    }
+  }
